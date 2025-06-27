@@ -88,7 +88,7 @@ Key parameters in `config.json` (or via command line):
 
 | Parameter | Description | Default |
 |-----------|-------------|---------|
-| `detection_confidence` | Minimum confidence for player detection | 0.5 |
+| `detection_confidence` | Minimum confidence for player detection | 0.1 |
 | `detection_iou` | Intersection-over-Union threshold for NMS | 0.5 |
 | `matching_threshold` | Similarity score threshold for player matching | 0.3 |
 | `max_distance` | Maximum spatial distance for matching (pixels) | 1200.0 |
