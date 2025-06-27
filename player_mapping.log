@@ -1,0 +1,46 @@
+2025-06-28 00:46:40,028 - src.utils - INFO - Starting Cross-Camera Player Mapping Pipeline...
+2025-06-28 00:46:40,029 - src.utils - INFO - Initializing pipeline components...
+2025-06-28 00:46:40,766 - src.utils - INFO - All components initialized successfully
+2025-06-28 00:46:40,767 - src.utils - INFO - Processing detections for broadcast video...
+2025-06-28 00:46:40,825 - src.utils - INFO - Video info: {'fps': 24.81203007518797, 'frame_count': 132, 'width': 1920, 'height': 1080, 'duration': 5.32}
+2025-06-28 00:47:47,687 - src.utils - INFO - Raw detections DataFrame shape: (17, 9)
+2025-06-28 00:47:47,687 - src.utils - INFO - Raw detections columns: ['bbox', 'confidence', 'class_id', 'center', 'area', 'crop', 'frame_idx', 'timestamp', 'video_source']
+2025-06-28 00:47:47,951 - src.utils - INFO - First 3 detections:
+                     bbox  confidence  class_id  ... frame_idx  timestamp   video_source
+0  [1442, 495, 1456, 510]    0.733867         0  ...         7   0.282121  broadcast.mp4
+1  [1447, 498, 1463, 513]    0.790542         0  ...         8   0.322424  broadcast.mp4
+2  [1460, 502, 1474, 517]    0.623042         0  ...        10   0.403030  broadcast.mp4
+
+[3 rows x 9 columns]
+2025-06-28 00:47:47,972 - src.utils - INFO - Processed 17 frames with 17 total detections
+2025-06-28 00:47:47,978 - src.utils - INFO - Processing detections for tacticam video...
+2025-06-28 00:47:47,993 - src.utils - INFO - Video info: {'fps': 24.63235294117647, 'frame_count': 201, 'width': 1920, 'height': 1080, 'duration': 8.16}
+2025-06-28 00:49:29,068 - src.utils - INFO - Raw detections DataFrame shape: (10, 9)
+2025-06-28 00:49:29,068 - src.utils - INFO - Raw detections columns: ['bbox', 'confidence', 'class_id', 'center', 'area', 'crop', 'frame_idx', 'timestamp', 'video_source']
+2025-06-28 00:49:29,262 - src.utils - INFO - First 3 detections:
+                   bbox  confidence  class_id  ... frame_idx  timestamp  video_source
+0  [596, 168, 607, 181]    0.618915         0  ...         4   0.162388  tacticam.mp4
+1  [582, 161, 592, 172]    0.651524         0  ...         8   0.324776  tacticam.mp4
+2  [583, 162, 592, 171]    0.710908         0  ...        31   1.258507  tacticam.mp4
+
+[3 rows x 9 columns]
+2025-06-28 00:49:29,268 - src.utils - INFO - Processed 10 frames with 10 total detections
+2025-06-28 00:49:29,271 - src.utils - INFO - Matching players across cameras...
+2025-06-28 00:49:29,272 - src.utils - INFO - Broadcast timestamps: 0.282 to 3.909
+2025-06-28 00:49:29,272 - src.utils - INFO - Tacticam timestamps: 0.162 to 2.436
+2025-06-28 00:49:29,272 - src.utils - INFO - Using time tolerance: 1.0s
+2025-06-28 00:49:29,272 - src.utils - INFO - Player matching completed - Generated 16 matches across 16 frames in 0.00s
+2025-06-28 00:49:29,276 - src.utils - INFO - Enhanced mappings saved to: results\results\player_mappings_20250628_004929.csv
+2025-06-28 00:49:29,277 - src.utils - INFO - Confidence statistics - Mean: 0.469, Min: 0.396, Max: 0.667
+2025-06-28 00:49:29,277 - src.utils - INFO - Generating visualizations...
+2025-06-28 00:49:29,278 - src.utils - INFO - Creating individual annotated videos...
+2025-06-28 00:49:30,076 - src.video_processor - INFO - Saved annotated video to results\visualizations\broadcast_annotated_20250628_004929.mp4
+2025-06-28 00:49:30,998 - src.video_processor - INFO - Saved annotated video to results\visualizations\tacticam_annotated_20250628_004930.mp4
+2025-06-28 00:49:30,998 - src.utils - INFO - Creating side-by-side comparison video...
+2025-06-28 00:49:37,435 - src.utils - INFO - Comparison video saved: results\visualizations\comparison_video_20250628_004930.mp4
+2025-06-28 00:49:37,844 - src.utils - INFO - Creating detection summary visualization...
+2025-06-28 00:49:38,574 - src.utils - INFO - Detection summary plot saved: results\visualizations\detection_summary_20250628_004938.png
+2025-06-28 00:49:38,574 - src.utils - INFO - Visualization generation completed in 9.30s
+2025-06-28 00:49:38,574 - src.utils - INFO - Generating final report...
+2025-06-28 00:49:38,576 - src.utils - INFO - Pipeline completed successfully!
+2025-06-28 00:49:38,576 - src.utils - INFO - Cleaning up pipeline resources...
