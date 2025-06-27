@@ -45,7 +45,7 @@ A computer vision system for detecting and matching players across different cam
 python main.py \
     --broadcast_path data/videos/broadcast.mp4 \
     --tacticam_path data/videos/tacticam.mp4 \
-    --model_path data/models/<your_player_detection_model_name>.pt \
+    --model_path data/models/yolov11_player_detection.pt \
     --output_dir results \
     --log_level INFO
 ```
@@ -122,7 +122,7 @@ Key parameters in `config.json` (or via command line):
 player_mapping_project/
 ├── data/                     # Sample videos and models
 │   ├── videos/               
-│   └── models/               # Put your player detection model within models folder
+│   └── models/               # Put your player detection model within models folder and for simplicity name it as 'yolov11_player_detection'
 ├── src/                      # Core source code
 │   ├── _init_.py             
 │   ├── feature_extractor.py  
