@@ -150,6 +150,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
+- YOLOv11 team for object detection model
 - OpenCV community for computer vision tools
 
 ## Contact
